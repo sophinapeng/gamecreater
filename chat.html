@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Create Your Game - GameTalk</title>
+    <link rel="stylesheet" href="styles/main.css">
+    <link rel="stylesheet" href="styles/chat.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.8.0/styles/atom-one-dark.min.css">
+</head>
+<body>
+    <div class="stars-container">
+        <div id="stars"></div>
+        <div id="stars2"></div>
+        <div id="stars3"></div>
+    </div>
+
+    <div class="chat-container">
+        <div class="chat-sidebar">
+            <div class="chat-messages" id="chatMessages">
+                <!-- 消息将在这里动态添加 -->
+            </div>
+            <div class="chat-input-area">
+                <textarea placeholder="描述你的想法..." id="userInput"></textarea>
+                <button class="send-btn" id="sendBtn">
+                    <i class="fas fa-paper-plane"></i>
+                </button>
+            </div>
+        </div>
+
+        <div class="resizer" id="dragMe"></div>
+
+        <div class="preview-area">
+            <div class="preview-header">
+                <div class="preview-tabs">
+                    <button class="tab-btn active" data-tab="code">
+                        <i class="fas fa-code"></i> Code
+                    </button>
+                    <button class="tab-btn" data-tab="preview">
+                        <i class="fas fa-play"></i> Preview
+                    </button>
+                </div>
+            </div>
+            <div class="preview-content">
+                <div class="tab-content active" id="codeTab">
+                    <div class="code-editor">
+                        <pre><code class="language-javascript">// Your game code will appear here</code></pre>
+                    </div>
+                </div>
+                <div class="tab-content" id="previewTab">
+                    <div class="game-preview-container">
+                        <!-- 游戏预览将在这里显示 -->
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.8.0/highlight.min.js"></script>
+    <script src="scripts/chat.js"></script>
+</body>
+</html> 
