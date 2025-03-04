@@ -1,0 +1,213 @@
+:root {
+    --primary-color: #6c63ff;
+    --background-dark: #0a0a0a;
+    --text-light: #ffffff;
+    --text-gray: #9e9e9e;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Arial', sans-serif;
+    background-color: var(--background-dark);
+    color: var(--text-light);
+    line-height: 1.6;
+    overflow-x: hidden;
+}
+
+/* 星空背景动画 */
+.stars-container {
+    position: fixed;
+    width: 100%;
+    height: 100%;
+    z-index: -1;
+}
+
+#stars, #stars2, #stars3 {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background: transparent;
+}
+
+/* 导航栏样式 */
+nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1rem 2rem;
+    background: rgba(0, 0, 0, 0.5);
+}
+
+.logo {
+    font-size: 1.5rem;
+    font-weight: bold;
+    color: var(--primary-color);
+}
+
+.nav-links a {
+    color: var(--text-light);
+    text-decoration: none;
+    margin-left: 2rem;
+}
+
+/* 主页样式 */
+.hero {
+    text-align: center;
+    padding: 6rem 2rem;
+}
+
+.hero h1 {
+    font-size: 4rem;
+    margin-bottom: 1rem;
+    background: linear-gradient(45deg, var(--primary-color), #ff6b6b);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+
+.slogan {
+    font-size: 1.5rem;
+    color: var(--text-gray);
+    margin-bottom: 3rem;
+}
+
+.cta-container {
+    margin-top: 2rem;
+}
+
+/* 输入框区域样式 */
+.input-wrapper {
+    position: relative;
+    display: inline-flex;
+    align-items: center;
+    width: 60%;
+    max-width: 600px;
+    margin-right: 1rem;
+}
+
+.game-input {
+    width: 100%;
+    padding: 1rem 3.5rem 1rem 1rem;
+    background: rgba(255, 255, 255, 0.1);
+    border: 2px solid transparent;
+    border-radius: 8px;
+    color: var(--text-light);
+    font-size: 1rem;
+    transition: all 0.3s ease;
+}
+
+.game-input:focus {
+    border-color: var(--primary-color);
+    outline: none;
+    background: rgba(255, 255, 255, 0.15);
+}
+
+.input-actions {
+    position: absolute;
+    right: 10px;
+    display: flex;
+    gap: 0.5rem;
+}
+
+.upload-btn, .enhance-btn {
+    background: none;
+    border: none;
+    color: var(--text-gray);
+    cursor: pointer;
+    padding: 0.5rem;
+    font-size: 1.2rem;
+    transition: color 0.3s ease;
+}
+
+.upload-btn:hover, .enhance-btn:hover {
+    color: var(--primary-color);
+}
+
+/* 游戏展示区域 */
+.showcase {
+    padding: 4rem 2rem;
+}
+
+.games-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 2rem;
+    margin-top: 2rem;
+}
+
+.game-card {
+    background: rgba(255, 255, 255, 0.1);
+    border-radius: 15px;
+    padding: 1rem;
+    transition: all 0.3s ease;
+}
+
+.game-card:hover {
+    transform: translateY(-5px);
+}
+
+.game-preview {
+    position: relative;
+    width: 100%;
+    height: 200px;
+    border-radius: 10px;
+    overflow: hidden;
+}
+
+.game-preview img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.game-info {
+    padding: 1rem 0;
+}
+
+.game-title {
+    font-size: 1.2rem;
+    margin-bottom: 0.5rem;
+}
+
+.game-meta {
+    display: flex;
+    justify-content: space-between;
+    color: var(--text-gray);
+    font-size: 0.9rem;
+}
+
+.game-stats {
+    display: flex;
+    gap: 1rem;
+}
+
+.stat {
+    display: flex;
+    align-items: center;
+    gap: 0.3rem;
+}
+
+/* 加载更多按钮 */
+.load-more {
+    text-align: center;
+    margin-top: 3rem;
+}
+
+#load-more-btn {
+    background: transparent;
+    border: 2px solid var(--primary-color);
+    color: var(--primary-color);
+    padding: 0.8rem 2rem;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+#load-more-btn:hover {
+    background: var(--primary-color);
+    color: white;
+} 
